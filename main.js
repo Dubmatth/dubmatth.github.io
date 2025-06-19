@@ -118,29 +118,111 @@ function createParticle() {
 // Create particles periodically
 setInterval(createParticle, 2000);
 
+// EmailJS Configuration
+(function() {
+    emailjs.init("0r1lCLOY9e_bTPMkX"); // Remplacez par votre clé publique EmailJS
+})();
+
 // Contact form submission
 document
   .querySelector(".contact-form")
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Simulate form submission
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
+    const form = this;
 
-    submitBtn.innerHTML =
-      '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    // Récupération des données du formulaire
+    const formData = {
+      from_name: form.name.value,
+      from_email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+      to_email: "dubois.matthieu@live.be" // Votre adresse email
+    };
+
+    // Validation basique
+    if (!formData.from_name || !formData.from_email || !formData.subject || !formData.message) {
+      showNotification("Veuillez remplir tous les champs", "error");
+      return;
+    }
+
+    // Validation email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.from_email)) {
+      showNotification("Veuillez entrer une adresse email valide", "error");
+      return;
+    }
+
+    // Interface utilisateur pendant l'envoi
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      submitBtn.innerHTML = '<i class="fas fa-check"></i> Message envoyé!';
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        this.reset();
-      }, 2000);
-    }, 2000);
+    // Envoi avec EmailJS
+    emailjs.send("service_i2nyuis", "template_a2rmt4j", formData)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message envoyé!';
+        showNotification("Votre message a été envoyé avec succès!", "success");
+        
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          form.reset();
+        }, 3000);
+      })
+      .catch(function(error) {
+        console.log('FAILED...', error);
+        submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erreur d\'envoi';
+        showNotification("Erreur lors de l'envoi. Veuillez réessayer ou me contacter directement.", "error");
+        
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }, 3000);
+      });
   });
+
+// Fonction pour afficher les notifications
+function showNotification(message, type = "info") {
+  // Supprimer les notifications existantes
+  const existingNotifications = document.querySelectorAll('.notification');
+  existingNotifications.forEach(notif => notif.remove());
+
+  // Créer la notification
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.innerHTML = `
+    <div class="notification-content">
+      <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
+      <span>${message}</span>
+      <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  `;
+
+  // Ajouter au DOM
+  document.body.appendChild(notification);
+
+  // Animation d'entrée
+  setTimeout(() => {
+    notification.classList.add('show');
+  }, 100);
+
+  // Suppression automatique après 5 secondes
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        if (notification.parentElement) {
+          notification.remove();
+        }
+      }, 300);
+    }
+  }, 5000);
+}
 
 // Typing animation for hero section
 function typeWriter(element, text, speed = 100) {
