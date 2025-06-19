@@ -1,445 +1,438 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dubois Matthieu - Développeur Web - Belgique</title>
-    <meta name="description" content="Developpement web">
-    <meta name="keywords" content="web,développeur,developpeur,fresh web dev,web dev,wordpress,prestashop,jquery,mysql,php,matthieu,dubois,matthieu dubois">
-    <meta name="author" content="Matthieu Dubois">
-
-    <!--FAVICON-->
-    <link rel="shortcut icon" href="assets/img/logoPortfoltio.png" type="image/x-icon">
-
-    <!--BOOTSTRAP-->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
-
-    <!--STYLESHEET-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-
-</head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-<!--Header-->
-<header id="header">
-    <div class="intro">
-        <div class="container">
-            <div class="row">
-                <div class="intro-text">
-                    <h1><span class="name">Matthieu Dubois</span></h1>
-                    <p>Junior Web Developer</p>
-                    <a href="#about" class="btn btn-default btn-lg page-scroll">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!--Navigation-->
-<div id="nav">
-    <nav class="navbar navbar-custom">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"> </i></button>
-                <a class="navbar-brand page-scroll" href="#page-top">Matthieu Dubois</a>
-            </div>
-            <!--Recup les liens, forms, et autre pour toggle-->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                 <ul class="nav navbar-nav">
-                     <li class="hidden"><a href="#page-top"></a></li>
-                     <li> <a href="#about" class="page-scroll">About</a> </li>
-                     <li> <a href="#skills" class="page-scroll">Skills</a> </li>
-                     <li> <a href="#portfolio" class="page-scroll">Portfolio</a> </li>
-                     <li> <a href="#resume" class="page-scroll">Resume</a> </li>
-                     <li> <a href="#contact" class="page-scroll">Contact</a> </li>
-                 </ul>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matthieu Dubois - Full-Stack Developer</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="logo">MD</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Accueil</a></li>
+          <li><a href="#about" class="nav-link">À Propos</a></li>
+          <li><a href="#skills" class="nav-link">Compétences</a></li>
+          <li><a href="#projects" class="nav-link">Projets</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
-</div>
 
-<!--About section-->
-<div id="about">
-    <div class="container">
-        <div class="section-title text-center center">
-            <h2>About me</h2>
-            <hr>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="particles" id="particles"></div>
+      <div class="hero-container">
+        <div class="hero-content fade-in">
+          <h1>Salut, je suis <span class="highlight">Matthieu</span></h1>
+          <p class="subtitle">Full-Stack Developer • Problem Solver</p>
+          <p class="description">
+            Après 9 ans dans le domaine de la sécurité, j'ai décidé de
+            transformer ma passion pour le code en carrière. Développeur
+            passionné, je crée des expériences numériques modernes et
+            performantes.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-code"></i>
+              Voir mes projets
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i>
+              Me contacter
+            </a>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-offset-1 col-md-10 text-center"><img src="assets/img/portrait1.png" class="img-responsive" alt="Matthieu Dubois">
-                <div class="about-text">
-                    <h3>Junior Developer</h3>
-                    <p>After working for 9 years as a security guard, i decided to make my passion my job. After several months of learning alone, i went back to the school benches and learn about web development.</p>
-                </div>
+        <div class="hero-visual fade-in">
+          <div class="hero-card">
+            <div class="code-snippet">
+              <span class="keyword">const</span> developer = {
+              <span class="keyword">name</span>:
+              <span class="string">"Matthieu Dubois"</span>,
+              <span class="keyword">skills</span>: [<span class="string"
+                >"JavaScript"</span
+              >, <span class="string">"React"</span>,
+              <span class="string">"Node.js"</span>],
+              <span class="keyword">passion</span>:
+              <span class="string">"Creating amazing experiences"</span>,
+              <span class="keyword">location</span>:
+              <span class="string">"Belgium"</span>
+              };
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </section>
 
-<!--Skills Section-->
-<div id="skills" class="text-center">
-    <div class="container">
-        <div class="section-title center">
-          <h2>Skills</h2>
-          <hr>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">À Propos de Moi</h2>
+          <p class="section-subtitle">
+            Mon parcours de la sécurité jusqu'au développement
+          </p>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="80"><span class="percent"></span></span>
-                <h4>HTML5</h4>
+        <div class="about-content">
+          <div class="about-image fade-in">
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Années d'expérience</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Projets réalisés</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Technologies maîtrisées</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Passion</div>
+              </div>
             </div>
-            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="75"><span class="percent"></span></span>
-                <h4>CSS3</h4>
-            </div>
-            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="60"><span class="percent"></span></span>
-                <h4>jQuery</h4>
-            </div>
-            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="60"><span class="percent"></span></span>
-                <h4>Wordpress</h4>
-            </div>
-            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="40"><span class="percent"></span></span>
-                <h4>Prestashop</h4>
-            </div>
-            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="70"><span class="percent"></span></span>
-                <h4>Photoshop</h4>
-            </div>
-        </div>
-    </div>
-</div>
+          </div>
+          <div class="about-text fade-in">
+            <p>
+              Ma reconversion professionnelle illustre parfaitement qu'il n'est
+              jamais trop tard pour suivre sa passion. Après 9 années dans la
+              sécurité des biens et des personnes, où j'ai acquis une solide
+              expérience en gestion de crises et en résolution de problèmes
+              complexes, j'ai pris la décision courageuse de me reconvertir dans
+              le développement.
+            </p>
+            <p>
+              Cette transition m'a appris la valeur de la persévérance et de
+              l'apprentissage continu. Aujourd'hui, je mets cette détermination
+              au service de projets web innovants, en combinant rigueur
+              professionnelle et créativité technique.
+            </p>
 
-<!--Portfolio Section-->
-<div id="portfolio">
-    <div class="container">
-        <div class="section-title text-center center">
-            <h2>Portfolio</h2>
-            <hr>
+            <div class="journey-timeline">
+              <div class="timeline-item">
+                <div class="timeline-year">2021-Present</div>
+                <div class="timeline-title">Développeur Full-Stack</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2019-2021</div>
+                <div class="timeline-title">Développeur Full-Stack & SharePoint consultant</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2017-2019</div>
+                <div class="timeline-title">Diplôme bac+2 développeur Web</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2010-2019</div>
+                <div class="timeline-title">Sécurité</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="categories">
-            <ul class="cat">
-                <li>
-                    <ol class="type">
-                        <li><a href="#" data-filter="*" class="active">All</a></li>
-                        <li><a href="#" data-filter=".dev">Development</a></li>
-                        <li><a href="#" data-filter=".web">Web design</a></li>
-                    </ol>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
+      </div>
+    </section>
 
-        <div class="row">
-            <div class="portfolio-items">
-                <div class="col-sm-6 col-md-3 col-lg-3 dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/01-large.jpg" title="Strict Business" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Strict Business</h4>
-                                <small>Web Development</small>
-                            </div>
-                            <img src="assets/img/portfolio/01-small.jpg" class="img-responsive" alt="Strict Business">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/02-large.jpg" title="Portfolio" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Portfolio</h4>
-                                <small>Web Development</small>
-                            </div>
-                            <img src="assets/img/portfolio/02-small.jpg" class="img-responsive" alt="Portfolio">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/03-large.jpg" title="Portfolio" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Portfolio</h4>
-                                <small>Web Development</small>
-                            </div>
-                            <img src="assets/img/portfolio/03-small.jpg" class="img-responsive" alt="Portfolio">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/04-large.jpg" title="Masseur Sportif" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Masseur Sportif</h4>
-                                <small>Web Developement</small>
-                            </div>
-                            <img src="assets/img/portfolio/04-small.jpg" class="img-responsive" alt="Masseur Sportif">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/05-large.jpg" title="Portfolio" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Portfolio</h4>
-                                <small>Web Development</small>
-                            </div>
-                            <img src="assets/img/portfolio/05-small.jpg" class="img-responsive" alt="Portfolio">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/06-large.jpg" title="Portfolio" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Portfolio</h4>
-                                <small>Web Development</small>
-                            </div>
-                            <img src="assets/img/portfolio/06-small.jpg" class="img-responsive" alt="Portfolio">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 web dev">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/07-large.jpg" title="Club des jeunes" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Club des jeunes</h4>
-                                <small>Web Developement & Web Design</small>
-                            </div>
-                            <img src="assets/img/portfolio/07-small.jpg" class="img-responsive" alt="Club des jeunes">
-                        </a></div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 web">
-                    <div class="portfolio-item">
-                        <div class="hover-bg"><a href="assets/img/portfolio/08-large.jpg" title="Restaurant" rel="prettyPhoto">
-                            <div class="hover-text">
-                                <h4>Restaurant</h4>
-                                <small>Web Developement & Web Design</small>
-                            </div>
-                            <img src="assets/img/portfolio/08-small.jpg" class="img-responsive" alt="Restaurant">
-                        </a></div>
-                    </div>
-                </div>
-            </div>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Mes Compétences</h2>
+          <p class="section-subtitle">Technologies et outils que je maîtrise</p>
         </div>
-    </div>
-</div>
+        <div class="skills-grid">
+          <div class="skill-category fade-in">
+            <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+            <div class="skill-list">
+              <div class="skill-item">HTML5</div>
+              <div class="skill-item">CSS3</div>
+              <div class="skill-item">JavaScript</div>
+              <div class="skill-item">React</div>
+              <div class="skill-item">TypeScript</div>
+              <div class="skill-item">Spfx</div>
+            </div>
+          </div>
+          <div class="skill-category fade-in">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-list">
+              <div class="skill-item">C#</div>
+              <div class="skill-item">Node.js</div>
+              <div class="skill-item">Express</div>
+              <div class="skill-item">MySQL</div>
+              <div class="skill-item">PostgreSQL</div>
+            </div>
+          </div>
+          <div class="skill-category fade-in">
+            <h3><i class="fas fa-tools"></i> Outils & DevOps</h3>
+            <div class="skill-list">
+              <div class="skill-item">Git</div>
+              <div class="skill-item">TFVC</div>
+              <div class="skill-item">Azure Devops</div>
+              <div class="skill-item">CICD</div>
+              <div class="skill-item">AWS</div>
+              <div class="skill-item">Vercel</div>
+              <div class="skill-item">Jest</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!--Achievement Section-->
-<div id="achievements" class="text-center">
-    <div class="container">
-        <div class="section-title center">
-            <h2>Some Stats</h2>
-            <hr>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Mes Projets</h2>
+          <p class="section-subtitle">Découvrez mes réalisations récentes</p>
         </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="200ms">
-                <div class="achievement-box"> <span class="count">10</span>
-                    <h4>Happy Clients</h4>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="400ms">
-                <div class="achievement-box"> <span class="count">1380</span>
-                    <h4>Hours of Work</h4>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="600ms">
-                <div class="achievement-box"> <span class="count">4</span>
-                    <h4>Years of passion</h4>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="800ms">
-                <div class="achievement-box"> <span class="count">2</span>
-                    <h4>Years of Experience</h4>
-                </div>
-            </div>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
         </div>
-    </div>
-</div>
+        <div class="projects-grid">
+          <div class="project-card fade-in" data-category="web">
+            <div class="project-image">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Voir le projet">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" title="Code source">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Caps Shop</h3>
+              <p class="project-desc">
+                Plateforme e-commerce complète avec panier, paiement sécurisé et
+                tableau de bord admin.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Prisma</span>
+                <span class="project-tag">GraphQl</span>
+                <span class="project-tag">Stripe</span>
+              </div>
+            </div>
+          </div>
 
-<!--Resume Section-->
-<div id="resume" class="text-center">
-    <div class="container">
-        <div class="section-title center">
-            <h2>Experiences</h2>
-            <hr>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="timeline">
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>June 2019 <br>
-                            - <br>
-                            Nov 2015  </h4>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>NIT Technogolies</h4>
-                                <h4 class="subheading">Security guard</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Data center</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image">
-                            <h4>Nov 2015 <br>
-                            - <br>
-                            March 2010</h4>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Securitas</h4>
-                                <h4 class="subheading">Security guard</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Bank oversight, store and construction site</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+          <div class="project-card fade-in" data-category="web">
+            <div class="project-image">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Documentation">
+                  <i class="fas fa-book"></i>
+                </a>
+                <a href="#" class="project-link" title="Code source">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="section-title center">
-            <h2>Education</h2>
-            <hr>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="timeline">
-                    <!--Education Section-->
-                    <li>
-                        <div class="timeline-image">
-                            <h4>2019 <br>
-                            - <br>
-                            2017 </h4>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Higher Education</h4>
-                                <h4 class="subheading">Bachelor (Bac+2)</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Web Developer Graduate Study Certificate</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>2009 <br>
-                            - <br>
-                            2008 </h4>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Security Guard</h4>
-                                <h4 class="subheading">Skills training</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Training "Loi Tobback"</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image">
-                            <h4>2007<br>
-                            - <br>
-                            1999 </h4>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Pierrard</h4>
-                                <h4 class="subheading">High School</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Electromechanical technician</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="project-content">
+              <h3 class="project-title">Weather app</h3>
+              <p class="project-desc">
+                Applications web météorologique complète avec données en temps réel et
+                prévisions sur 7 jours.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Firebase</span>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
+          </div>
 
-<!--Contact Section-->
-<div id="contact" class="text-center">
-    <div class="container">
-        <div class="section-title center">
-            <h2>Contact</h2>
-            <hr>
+          <div class="project-card fade-in" data-category="web">
+            <div class="project-image">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Voir le projet">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" title="Code source">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Site web</h3>
+              <p class="project-desc">
+                Site web vitrine pour un club des jeunes, avec informations sur les
+                activités, les événements et les contacts.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">jQuery</span>
+                <span class="project-tag">PHP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in" data-category="mobile">
+            <div class="project-image">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Télécharger">
+                  <i class="fas fa-mobile-alt"></i>
+                </a>
+                <a href="#" class="project-link" title="Code source">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">TodoList/Pomodoro</h3>
+              <p class="project-desc">
+                Application mobile de suivi de tâches ainsi qu'un timer pomodoro.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Expo</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Express.js</span>
+                <span class="project-tag">Prisma</span>
+                <span class="project-tag">PostgreSQL.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in" data-category="web">
+            <div class="project-image">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Voir le projet">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" title="Code source">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Site web</h3>
+              <p class="project-desc">
+                Site web vitrine pour une cabinet de kinesithérapie, avec
+                informations sur les services, les horaires.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">jQuery</span>
+                <span class="project-tag">PHP</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
-            <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
-                <p>38 chemin des genêts, <br>
-                Wisembach 6637 <br>
-                Belgium</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Contactez-moi</h2>
+          <p class="section-subtitle">
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info fade-in">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p>dubois.matthieu@live.be</p>
+              </div>
             </div>
-            <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
-                <p>contact@duboismatthieu.be</p>
-            </div>
-            <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3>Téléphone</h3>
                 <p>+32 (0) 493 147 946</p>
+              </div>
             </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="col-md-8 col-md-offset-2">
-            <h3>Leave me a message</h3>
-            <form method="post" action="php/contact_me.php" name="sentMessage" id="contactForm" novalidate>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" id="name" class="form-control" placeholder="Name" required>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="email" id="email" class="form-control" placeholder="Email" required>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-                    <p class="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" class="btn btn-default">Send Message</button>
-            </form>
-            <div class="social">
-                <ul>
-                    <li><a href="https://www.facebook.com/dubmatth"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/dubmatth"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/dubmatth"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://stackoverflow.com/users/9447539/dubmatth"><i class="fa fa-stack-overflow"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/matthieu-dubois-42aa65a2/"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3>Localisation</h3>
+                <p>Martelange, Belgique</p>
+              </div>
             </div>
+          </div>
+          <form class="contact-form fade-in">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Envoyer le message
+            </button>
+          </form>
         </div>
-    </div>
-</div>
-<div id="footer">
-    <div class="container text-center">
-        <div class="fnav">
-            <p>Copyright &copy; 2018 - Matthieu Dubois.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="social-links">
+          <a
+            href="https://github.com/dubmatth"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/matthieu-dubois"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://twitter.com/dubmatth"
+            class="social-link"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:dubois.matthieu@live.be" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
-    </div>
-</div>
-<script src="js/jquery.1.11.1.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/SmoothScroll.js"></script>
-<script src="js/easypiechart.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/jquery.isotope.js"></script>
-<script src="js/jquery.counterup.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
-<script src="js/main.js"></script>
-</body>
+        <p class="footer-text">
+          © 2025 Matthieu Dubois. Conçu avec ❤️ et beaucoup de café.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
+
+<script src="main.js"></script>
